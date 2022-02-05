@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  color: #333;
+  line-height: 1.5;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Section */
+
+.section {
+  display: block;
+  padding: 5rem 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.section-fluid {
+  display: block;
+}
+
+.section-info {
+  max-width: 70%;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+
+.section-description {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  height: 70vh;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 4rem;
+  max-width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+}
+
+
+/* Intro */
+.intro-wrapper {
+  background-color: #eee;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+}
+
+.intro-content__one  p{
+  margin-bottom: 1rem;
+}
+
+/* Project */
+.project-wrapper {
+  background: #222;
+  color: #eee; 
+}
+
+/* contact */
+.content-wrapper {
+  background: #eee;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: chocolate;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
