@@ -1,0 +1,1 @@
+console.log(process.ENV.SECRET_KEY)
