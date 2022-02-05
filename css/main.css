@@ -4,10 +4,10 @@
   margin: 0;
 }
 
-body{
+body {
   color: #333;
   line-height: 1.5;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* Section */
@@ -48,18 +48,32 @@ body{
   align-items: center;
 }
 
+.emphasis {
+  position: relative;
+}
+
+.emphasis::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: chocolate;
+}
+
 .hero-title {
   text-align: center;
   font-size: 4rem;
   max-width: 80%;
   margin: 0 auto;
   color: white;
+  position: relative;
 }
 
 .hero-actions {
   margin-top: 2rem;
 }
-
 
 /* Intro */
 .intro-wrapper {
@@ -72,19 +86,194 @@ body{
   margin-top: 30px;
 }
 
-.intro-content__one  p{
+.intro-content__one p {
   margin-bottom: 1rem;
+}
+
+.intro-content__two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 50px;
+}
+
+.intro-content__image {
+  position: absolute;
+  top: 0;
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  filter: grayscale(1);
+}
+
+.intro-content__image:hover {
+  filter: grayscale(0);
+}
+
+.intro-content__image.image-b {
+  left: 0px;
+}
+
+.intro-content__image.image-d {
+  right: 0;
+  top: 200px;
+  height: 400px;
+  object-fit: cover;
 }
 
 /* Project */
 .project-wrapper {
   background: #222;
-  color: #eee; 
+  color: #eee;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.project {
+  position: relative;
+  background-color: #444;
+  padding: 40px 30px;
+  border-radius: 5px;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.project:hover {
+  background-color: #333;
+  transform: scale(1.012);
+}
+
+.project h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.project p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+/* Team */
+
+.team-wrapper {
+  background: #eee;
+  color: #333;
+}
+
+.team-content {
+  display: grid;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.team {
+  display: flex;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.team .social {
+  margin-top: 40px;
+}
+
+.team .social a {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.team-image {
+  width: 250px;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-info {
+  padding: 20px 15px;
 }
 
 /* contact */
 .content-wrapper {
   background: #eee;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 30px;
+}
+
+.form-contact {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form-contact input,
+.form-contact textarea {
+  margin-bottom: 10px;
+  border: none;
+  padding: 20px 20px;
+  background-color: #eee;
+  border-radius: 5px;
+  color: #333;
+  width: 100%;
+}
+
+.form-contact input::placeholder,
+.form-contact textarea::placeholder {
+  color: #333;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+  outline: none;
+}
+
+.form-contact .btn {
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact-content .address {
+  margin-bottom: 40px;
+}
+
+.contact-content .phone {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-content .email {
+  margin-bottom: 10px;
+}
+
+.contact-content .social {
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 /* Buttons */
@@ -93,8 +282,17 @@ body{
   background-color: chocolate;
   color: white;
   padding: 1rem 3rem;
-  border-radius: 15px;
+  border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
   box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
